@@ -112,13 +112,13 @@ const Buyers = ({isAuth, buyers, sortBuyers}) => {
                 <ul className="pagination">
                     <li onClick={() => setItemsCountPerPage(5)}
                         className={`${itemsCountPerPage === 5 ? 'active' : ''} page-item`}>
-                        <a href="#" className="page-link">5</a></li>
+                        <a className="page-link">5</a></li>
                     <li onClick={() => setItemsCountPerPage(10)}
                         className={`${itemsCountPerPage === 10 ? 'active' : ''} page-item`}>
-                        <a href="#" className="page-link">10</a></li>
+                        <a className="page-link">10</a></li>
                     <li onClick={() => setItemsCountPerPage(15)}
                         className={`${itemsCountPerPage === 15 ? 'active' : ''} page-item`}>
-                        <a href="#" className="page-link">15</a></li>
+                        <a className="page-link">15</a></li>
                 </ul>
             </div>
         </div>
