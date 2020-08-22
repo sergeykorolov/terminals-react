@@ -1,0 +1,41 @@
+.contentBox {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+
+  th {
+    vertical-align: top !important;
+  }
+
+  table {
+    margin-top: 10px;
+    tr:nth-child(even){
+      background: #fff;
+    }
+    .thWrapper{
+      display: flex;
+      span:last-child{
+        padding-left: 5px;
+      }
+    }
+    .active {
+      color: #52accc;
+    }
+    a {
+      color: #52accc;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+.pagingWrapper{
+  display: flex;
+  justify-content: space-between;
+
+  a{
+    color: #52accc;
+  }
+}

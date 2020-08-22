@@ -1,0 +1,20 @@
+.contentBox {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 15px;
+
+      strong {
+        width: 150px;
+        display: inline-block;
+      }
+    }
+  }
+}

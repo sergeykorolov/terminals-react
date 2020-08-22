@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Login from "./components/Login/Login";
+import Sidebar from "./components/Sidebar/Sidebar";
+import {Redirect, Route, Switch} from "react-router-dom";
+import TerminalsContainer from "./components/Terminals/TerminalsContainer";
+import BuyersContainer from "./components/Buyers/BuyersContainer";
+import Buyer from "./components/Buyers/Buyer/Buyer";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="app-wrapper">
+            <Sidebar />
+            <div className="content">
+                <Switch>
+                    <Route exact path='/' render={() => <Login/>}/>
+                    <Route exact path="/terminals" render={() => <TerminalsContainer/>}/>
+                    <Route exact path="/buyers" render={() => <BuyersContainer/>}/>
+                    <Route exact path="/buyers/:buyerId?" component={Buyer}/>
+                    <Route path="/" component={ErrorPage}/>
+                </Switch>
+            </div>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,70 @@
+body{
+  background-color: #daebf1;
+  min-width: 600px;
+}
+.app-wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 850px;
+
+
+  .content {
+    width: 100%;
+    margin: 30px 0 30px 30px;
+  }
+}
+
+input:focus{
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #52accc;
+  border: none;
+  &:hover {
+    background-color: #4993B0;
+  }
+}
+
+.btn-info {
+  background-color: #bebebe;
+  border: none;
+  &:hover {
+    background-color: #A6A6A6;
+  }
+}
+
+.pagination{
+  .page-item.active .page-link{
+    background: #52accc;
+    border: 1px solid #52accc;
+    &:hover{
+      color: #fff;
+    }
+  }
+  .page-item .page-link{
+    &:focus{
+      box-shadow: none;
+    }
+    &:hover{
+      color: #52accc;
+    }
+  }
+  .page-item.disabled .page-link {
+    color: #e4e8ea;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .app-wrapper{
+    display: block;
+    .content{
+      margin-left: 0;
+    }
+
+    .card-footer{
+      border: none;
+    }
+  }
+}
